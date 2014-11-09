@@ -1,0 +1,149 @@
+$default-text-shadow-color: rgba(black, 0.6);
+$default-text-shadow-blur: 3px;
+$default-text-shadow-v-offset: 1px;
+
+@import "compass/css3";
+
+body {
+	background: lighten($primary-color, 40%);
+	height: 100%;
+}
+
+.main-content {
+	height: 100%;
+}
+
+.main-body {
+	max-width: 900px;
+	height: 100%;
+	.header-image {
+		padding-top: 10px;
+		img {
+			width: 100%
+		}
+	}
+	h2 {
+		font-family: $head-font;
+		border-bottom: 1px dotted $secondary-color;
+		padding: 15px 10px; 
+		color: $secondary-color;
+		margin-bottom: 10px;
+		font-size: rem-calc(30px);
+		
+	}
+		#product-rotation {
+			.item {
+				background-color: $secondary-color;
+				padding: 5px;
+		  		margin: 3px;
+		  		img {
+				  display: block;
+				  width: 100%;
+				  height: auto;
+				  margin-bottom: 5px;
+				}
+				h4 {
+					font-family: $main-font;
+					color: white;
+					text-align: center;
+
+				}
+				.button {
+					margin-bottom: 0;
+					font-family: $head-font;
+				}
+			}
+		}
+		#popular-rotation {
+			.item {
+				background-color: lighten($secondary-color, 30%);
+				padding: 5px;
+		  		margin: 3px;
+		  		img {
+				  display: block;
+				  width: 100%;
+				  height: auto;
+				  margin-bottom: 5px;
+				}
+				h4 {
+					font-family: $main-font;
+					color: white;
+					text-align: center;
+					font-size: rem-calc(12px);
+
+				}
+				.button {
+					margin-bottom: 0;
+					font-family: $head-font;
+
+				}
+			}
+		}
+
+	}
+
+.sidebar {
+	background: lighten($primary-color, 10%);
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	.logo {
+		padding: 30px;
+		h1 {
+			font-family: $head-font;
+			color: white;
+			font-size: rem-calc(34px);
+			@include single-text-shadow;
+		}
+	}
+	.side-nav {
+		
+		padding: 0;
+		a.side-link {
+			padding: 20px 10px 20px 30px;
+			font-family: $head-font;
+			font-size: rem-calc(20px);
+			p {
+				font-family: $main-font;
+				font-size: rem-calc(14px);
+				margin: 0;
+				padding: 0;
+				color: white;
+			}
+		}
+		li {
+			margin: 0;
+		}
+		li:nth-of-type(1) {
+			background: darken($primary-color, 30%);
+		}
+		li:nth-of-type(2) {
+			background: darken($primary-color, 20%);
+		}
+		li:nth-of-type(3) {
+			background: darken($primary-color, 10%);
+		}
+		li:nth-of-type(4) {
+			background: darken($primary-color, 5%);
+		}
+
+	}
+}
+
+footer {
+
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 40px; /* choose any height */
+	background-color: darken($primary-color, 30%);
+	margin-top: 10px;
+	padding: 10px 0 10px 30px;
+	p {
+		color: white;
+		font-family: $main-font;
+		padding: 0;
+		margin: 0;
+
+	}
+}
